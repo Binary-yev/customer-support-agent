@@ -1,0 +1,269 @@
+{
+  "eval_cases": [
+    {
+      "prompt": {
+        "parts": [
+          {
+            "text": "How much does overnight shipping cost?"
+          }
+        ],
+        "role": "user"
+      },
+      "responses": [
+        {
+          "response": {
+            "parts": [
+              {
+                "text": "Woohoo! You want your package super-duper fast?! We've got you covered! 🚀✨\n\nOur lightning-speed **Overnight Shipping** gets your package to your doorstep the very next business day for just **$29.99**! 🌟✈️\n\nBut wait, there's more! If you're planning a bigger shopping spree, we have a mind-blowing deal for you! 🎉 If your order total reaches **$50 or more**, you qualify for **FREE STANDARD SHIPPING**! 🛒🎁 That's right, absolutely FREE! 🥳💃\n\nLet us know if you need help setting up your shipment! Have a magical day! 🌈 Standard shipping is usually $5.99 (3-5 business days), but hitting that $50 mark is where the real magic happens! 😍✨"
+              }
+            ],
+            "role": "model"
+          }
+        }
+      ],
+      "eval_case_id": "shipping_rate_query",
+      "agent_data": {
+        "agents": {
+          "customer_support_workflow": {
+            "agent_id": "customer_support_workflow",
+            "agent_type": "Workflow",
+            "description": "",
+            "tools": [],
+            "sub_agents": []
+          }
+        },
+        "turns": [
+          {
+            "turn_index": 0,
+            "turn_id": "turn_0",
+            "events": [
+              {
+                "author": "shipping_faq",
+                "content": {
+                  "parts": [
+                    {
+                      "text": "Woohoo! You want your package super-duper fast?! We've got you covered! 🚀✨\n\nOur lightning-speed **Overnight Shipping** gets your package to your doorstep the very next business day for just **$29.99**! 🌟✈️\n\nBut wait, there's more! If you're planning a bigger shopping spree, we have a mind-blowing deal for you! 🎉 If your order total reaches **$50 or more**, you qualify for **FREE STANDARD SHIPPING**! 🛒🎁 That's right, absolutely FREE! 🥳💃\n\nLet us know if you need help setting up your shipment! Have a magical day! 🌈 Standard shipping is usually $5.99 (3-5 business days), but hitting that $50 mark is where the real magic happens! 😍✨"
+                    }
+                  ],
+                  "role": "model"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "prompt": {
+        "parts": [
+          {
+            "text": "Where is my package? The tracking number is 1234567890."
+          }
+        ],
+        "role": "user"
+      },
+      "responses": [
+        {
+          "response": {
+            "parts": [
+              {
+                "text": "Hello! Thank you for reaching out to us today. \n\nYou can easily track the status of your package by entering your 10-digit tracking number (**1234567890**) on the tracking page of our website. \n\nIf the tracking information shows that your package has been \"delivered\" but you cannot find it, we kindly ask that you verify with your neighbors first to see if it was accepted on your behalf. If it is still missing, please reach out to our dedicated tracking team at **tracking@shippingco.com**, and we will be happy to help you locate it.\n\nPlease let me know if you have any other questions!"
+              }
+            ],
+            "role": "model"
+          }
+        }
+      ],
+      "eval_case_id": "tracking_query",
+      "agent_data": {
+        "agents": {
+          "customer_support_workflow": {
+            "agent_id": "customer_support_workflow",
+            "agent_type": "Workflow",
+            "description": "",
+            "tools": [],
+            "sub_agents": []
+          }
+        },
+        "turns": [
+          {
+            "turn_index": 0,
+            "turn_id": "turn_0",
+            "events": [
+              {
+                "author": "shipping_faq",
+                "content": {
+                  "parts": [
+                    {
+                      "text": "Hello! Thank you for reaching out to us today. \n\nYou can easily track the status of your package by entering your 10-digit tracking number (**1234567890**) on the tracking page of our website. \n\nIf the tracking information shows that your package has been \"delivered\" but you cannot find it, we kindly ask that you verify with your neighbors first to see if it was accepted on your behalf. If it is still missing, please reach out to our dedicated tracking team at **tracking@shippingco.com**, and we will be happy to help you locate it.\n\nPlease let me know if you have any other questions!"
+                    }
+                  ],
+                  "role": "model"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "prompt": {
+        "parts": [
+          {
+            "text": "Can I return an item I received 15 days ago?"
+          }
+        ],
+        "role": "user"
+      },
+      "responses": [
+        {
+          "response": {
+            "parts": [
+              {
+                "text": "Hello! Yes, you can absolutely return your item. \n\nAccording to our policy, returns are completely free as long as they are initiated within 30 days of delivery, so you are well within the timeframe! \n\nTo qualify for a return, please ensure that the item is unused and in its original packaging. You can easily print a pre-paid return shipping label by logging into our online customer portal. \n\nPlease let me know if you have any other questions or if you need help navigating the portal!"
+              }
+            ],
+            "role": "model"
+          }
+        }
+      ],
+      "eval_case_id": "returns_query",
+      "agent_data": {
+        "agents": {
+          "customer_support_workflow": {
+            "agent_id": "customer_support_workflow",
+            "agent_type": "Workflow",
+            "description": "",
+            "tools": [],
+            "sub_agents": []
+          }
+        },
+        "turns": [
+          {
+            "turn_index": 0,
+            "turn_id": "turn_0",
+            "events": [
+              {
+                "author": "shipping_faq",
+                "content": {
+                  "parts": [
+                    {
+                      "text": "Hello! Yes, you can absolutely return your item. \n\nAccording to our policy, returns are completely free as long as they are initiated within 30 days of delivery, so you are well within the timeframe! \n\nTo qualify for a return, please ensure that the item is unused and in its original packaging. You can easily print a pre-paid return shipping label by logging into our online customer portal. \n\nPlease let me know if you have any other questions or if you need help navigating the portal!"
+                    }
+                  ],
+                  "role": "model"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "prompt": {
+        "parts": [
+          {
+            "text": "What is the weather like in New York?"
+          }
+        ],
+        "role": "user"
+      },
+      "responses": [
+        {
+          "response": {
+            "parts": [
+              {
+                "text": "I'm sorry, but I can only assist with shipping-related inquiries (such as shipping rates, package tracking, delivery status, and returns). How can I help you with your shipping needs today?"
+              }
+            ],
+            "role": "model"
+          }
+        }
+      ],
+      "eval_case_id": "unrelated_weather",
+      "agent_data": {
+        "agents": {
+          "customer_support_workflow": {
+            "agent_id": "customer_support_workflow",
+            "agent_type": "Workflow",
+            "description": "",
+            "tools": [],
+            "sub_agents": []
+          }
+        },
+        "turns": [
+          {
+            "turn_index": 0,
+            "turn_id": "turn_0",
+            "events": [
+              {
+                "author": "customer_support_workflow",
+                "content": {
+                  "parts": [
+                    {
+                      "text": "I'm sorry, but I can only assist with shipping-related inquiries (such as shipping rates, package tracking, delivery status, and returns). How can I help you with your shipping needs today?"
+                    }
+                  ],
+                  "role": "model"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "prompt": {
+        "parts": [
+          {
+            "text": "Tell me a joke."
+          }
+        ],
+        "role": "user"
+      },
+      "responses": [
+        {
+          "response": {
+            "parts": [
+              {
+                "text": "I'm sorry, but I can only assist with shipping-related inquiries (such as shipping rates, package tracking, delivery status, and returns). How can I help you with your shipping needs today?"
+              }
+            ],
+            "role": "model"
+          }
+        }
+      ],
+      "eval_case_id": "unrelated_general",
+      "agent_data": {
+        "agents": {
+          "customer_support_workflow": {
+            "agent_id": "customer_support_workflow",
+            "agent_type": "Workflow",
+            "description": "",
+            "tools": [],
+            "sub_agents": []
+          }
+        },
+        "turns": [
+          {
+            "turn_index": 0,
+            "turn_id": "turn_0",
+            "events": [
+              {
+                "author": "customer_support_workflow",
+                "content": {
+                  "parts": [
+                    {
+                      "text": "I'm sorry, but I can only assist with shipping-related inquiries (such as shipping rates, package tracking, delivery status, and returns). How can I help you with your shipping needs today?"
+                    }
+                  ],
+                  "role": "model"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

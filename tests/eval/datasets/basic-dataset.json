@@ -1,0 +1,39 @@
+{
+  "eval_cases": [
+    {
+      "eval_case_id": "shipping_rate_query",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "How much does overnight shipping cost?"}]
+      }
+    },
+    {
+      "eval_case_id": "tracking_query",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "Where is my package? The tracking number is 1234567890."}]
+      }
+    },
+    {
+      "eval_case_id": "returns_query",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "Can I return an item I received 15 days ago?"}]
+      }
+    },
+    {
+      "eval_case_id": "unrelated_weather",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "What is the weather like in New York?"}]
+      }
+    },
+    {
+      "eval_case_id": "unrelated_general",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "Tell me a joke."}]
+      }
+    }
+  ]
+}

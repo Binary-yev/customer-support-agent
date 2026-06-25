@@ -1,0 +1,692 @@
+{
+  "eval_case_results": [
+    {
+      "eval_case_index": 0,
+      "response_candidate_results": [
+        {
+          "response_index": 0,
+          "metric_results": {
+            "custom_response_quality": {
+              "metric_name": "custom_response_quality",
+              "score": 5.0,
+              "explanation": "The response directly and accurately answers the user's question about the cost of overnight shipping. It provides the exact cost ($29.99) and even includes useful additional information (delivery time: next business day) without being asked, which enhances the user experience. The greeting and closing are appropriate for a customer service interaction. The information is presented clearly and concisely, making it an excellent response.",
+              "rubric_verdicts": null,
+              "raw_output": null,
+              "error_message": null
+            }
+          }
+        }
+      ]
+    },
+    {
+      "eval_case_index": 1,
+      "response_candidate_results": [
+        {
+          "response_index": 0,
+          "metric_results": {
+            "custom_response_quality": {
+              "metric_name": "custom_response_quality",
+              "score": 2.0,
+              "explanation": "The user explicitly asks 'Where is my package?' and provides a tracking number, expecting the AI assistant to provide the current status or a direct link to the tracking information. However, the agent's response is a generic instruction telling the user how to track the package themselves on a website. While it provides the tracking number back to the user and offers proactive advice for 'delivered' packages, it fails to directly answer the core question by not utilizing the provided tracking number to fetch the actual package status. An AI assistant should ideally perform the requested action if it has the capability, rather than instructing the user to do it. This constitutes a significant gap in directly addressing the query, although the information provided is not incorrect or confusing.",
+              "rubric_verdicts": null,
+              "raw_output": null,
+              "error_message": null
+            }
+          }
+        }
+      ]
+    },
+    {
+      "eval_case_index": 2,
+      "response_candidate_results": [
+        {
+          "response_index": 0,
+          "metric_results": {
+            "custom_response_quality": {
+              "metric_name": "custom_response_quality",
+              "score": 5.0,
+              "explanation": "The response directly and accurately answers the user's question, confirming that a return is possible. It provides essential context by citing the 30-day return policy and explicitly stating that 15 days is within this window. Furthermore, it includes crucial additional information regarding return conditions (unused, original packaging) and clear instructions on how to initiate the return process (pre-paid label via customer portal). The response is comprehensive, flawlessly accurate, well-structured, and polite, leaving no room for confusion. The agent successfully used the `shipping_faq` to provide a complete and helpful answer.",
+              "rubric_verdicts": null,
+              "raw_output": null,
+              "error_message": null
+            }
+          }
+        }
+      ]
+    },
+    {
+      "eval_case_index": 3,
+      "response_candidate_results": [
+        {
+          "response_index": 0,
+          "metric_results": {
+            "custom_response_quality": {
+              "metric_name": "custom_response_quality",
+              "score": 5.0,
+              "explanation": "The user asked a question outside the agent's defined capabilities ('What is the weather like in New York?'). The agent correctly and politely identified its limitations, stating it can only assist with shipping-related inquiries, and then offered to help with relevant topics. This is an excellent response for an agent designed for a specific domain, as it clearly communicates its scope without fabricating an answer or attempting to use an unavailable tool.",
+              "rubric_verdicts": null,
+              "raw_output": null,
+              "error_message": null
+            }
+          }
+        }
+      ]
+    },
+    {
+      "eval_case_index": 4,
+      "response_candidate_results": [
+        {
+          "response_index": 0,
+          "metric_results": {
+            "custom_response_quality": {
+              "metric_name": "custom_response_quality",
+              "score": 1.0,
+              "explanation": "The user asked for a joke, which is a simple, direct request. The agent explicitly stated that it can only assist with shipping-related inquiries and did not tell a joke. This is a complete failure to address the user's query, as it falls outside the agent's programmed scope. While the agent correctly identified its limitation, it did not fulfill the user's request in any way, making the response poor in terms of task completion.",
+              "rubric_verdicts": null,
+              "raw_output": null,
+              "error_message": null
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "summary_metrics": [
+    {
+      "metric_name": "custom_response_quality",
+      "num_cases_total": 5,
+      "num_cases_valid": 5,
+      "num_cases_error": 0,
+      "mean_score": 3.6,
+      "stdev_score": 1.949358868961793,
+      "pass_rate": null
+    }
+  ],
+  "win_rates": null,
+  "evaluation_dataset": [
+    {
+      "bigquery_source": null,
+      "gcs_source": null,
+      "eval_cases": [
+        {
+          "prompt": {
+            "parts": [
+              {
+                "media_resolution": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "file_data": null,
+                "function_call": null,
+                "function_response": null,
+                "inline_data": null,
+                "text": "How much does overnight shipping cost?",
+                "thought": null,
+                "thought_signature": null,
+                "video_metadata": null,
+                "tool_call": null,
+                "tool_response": null,
+                "part_metadata": null
+              }
+            ],
+            "role": "user"
+          },
+          "responses": [
+            {
+              "response": {
+                "parts": [
+                  {
+                    "media_resolution": null,
+                    "code_execution_result": null,
+                    "executable_code": null,
+                    "file_data": null,
+                    "function_call": null,
+                    "function_response": null,
+                    "inline_data": null,
+                    "text": "Hello! \n\nOvernight shipping costs $29.99 and takes next business day to arrive. \n\nPlease let me know if you have any other questions or if there is anything else I can assist you with!",
+                    "thought": null,
+                    "thought_signature": null,
+                    "video_metadata": null,
+                    "tool_call": null,
+                    "tool_response": null,
+                    "part_metadata": null
+                  }
+                ],
+                "role": "model"
+              }
+            }
+          ],
+          "reference": null,
+          "system_instruction": null,
+          "conversation_history": null,
+          "rubric_groups": null,
+          "eval_case_id": "shipping_rate_query",
+          "intermediate_events": null,
+          "agent_info": null,
+          "agent_data": {
+            "agents": {
+              "customer_support_workflow": {
+                "agent_id": "customer_support_workflow",
+                "agent_type": "Workflow",
+                "description": "",
+                "instruction": null,
+                "tools": [],
+                "sub_agents": []
+              }
+            },
+            "turns": [
+              {
+                "turn_index": 0,
+                "turn_id": "turn_0",
+                "events": [
+                  {
+                    "author": "shipping_faq",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": null,
+                          "function_response": null,
+                          "inline_data": null,
+                          "text": "Hello! \n\nOvernight shipping costs $29.99 and takes next business day to arrive. \n\nPlease let me know if you have any other questions or if there is anything else I can assist you with!",
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "event_time": null,
+                    "state_delta": null,
+                    "active_tools": null
+                  }
+                ]
+              }
+            ]
+          },
+          "user_scenario": null
+        },
+        {
+          "prompt": {
+            "parts": [
+              {
+                "media_resolution": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "file_data": null,
+                "function_call": null,
+                "function_response": null,
+                "inline_data": null,
+                "text": "Where is my package? The tracking number is 1234567890.",
+                "thought": null,
+                "thought_signature": null,
+                "video_metadata": null,
+                "tool_call": null,
+                "tool_response": null,
+                "part_metadata": null
+              }
+            ],
+            "role": "user"
+          },
+          "responses": [
+            {
+              "response": {
+                "parts": [
+                  {
+                    "media_resolution": null,
+                    "code_execution_result": null,
+                    "executable_code": null,
+                    "file_data": null,
+                    "function_call": null,
+                    "function_response": null,
+                    "inline_data": null,
+                    "text": "Hello! Thank you for reaching out to us.\n\nYou can easily track the status of your package on our website using your 10-digit tracking number (1234567890). \n\nIf the tracking status shows as \"delivered\" but you cannot locate your package, please verify with your neighbors to see if it was accepted on your behalf, or contact us directly at tracking@shippingco.com for further assistance. \n\nPlease let me know if there is anything else I can help you with!",
+                    "thought": null,
+                    "thought_signature": null,
+                    "video_metadata": null,
+                    "tool_call": null,
+                    "tool_response": null,
+                    "part_metadata": null
+                  }
+                ],
+                "role": "model"
+              }
+            }
+          ],
+          "reference": null,
+          "system_instruction": null,
+          "conversation_history": null,
+          "rubric_groups": null,
+          "eval_case_id": "tracking_query",
+          "intermediate_events": null,
+          "agent_info": null,
+          "agent_data": {
+            "agents": {
+              "customer_support_workflow": {
+                "agent_id": "customer_support_workflow",
+                "agent_type": "Workflow",
+                "description": "",
+                "instruction": null,
+                "tools": [],
+                "sub_agents": []
+              }
+            },
+            "turns": [
+              {
+                "turn_index": 0,
+                "turn_id": "turn_0",
+                "events": [
+                  {
+                    "author": "shipping_faq",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": null,
+                          "function_response": null,
+                          "inline_data": null,
+                          "text": "Hello! Thank you for reaching out to us.\n\nYou can easily track the status of your package on our website using your 10-digit tracking number (1234567890). \n\nIf the tracking status shows as \"delivered\" but you cannot locate your package, please verify with your neighbors to see if it was accepted on your behalf, or contact us directly at tracking@shippingco.com for further assistance. \n\nPlease let me know if there is anything else I can help you with!",
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "event_time": null,
+                    "state_delta": null,
+                    "active_tools": null
+                  }
+                ]
+              }
+            ]
+          },
+          "user_scenario": null
+        },
+        {
+          "prompt": {
+            "parts": [
+              {
+                "media_resolution": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "file_data": null,
+                "function_call": null,
+                "function_response": null,
+                "inline_data": null,
+                "text": "Can I return an item I received 15 days ago?",
+                "thought": null,
+                "thought_signature": null,
+                "video_metadata": null,
+                "tool_call": null,
+                "tool_response": null,
+                "part_metadata": null
+              }
+            ],
+            "role": "user"
+          },
+          "responses": [
+            {
+              "response": {
+                "parts": [
+                  {
+                    "media_resolution": null,
+                    "code_execution_result": null,
+                    "executable_code": null,
+                    "file_data": null,
+                    "function_call": null,
+                    "function_response": null,
+                    "inline_data": null,
+                    "text": "Hello! Yes, you can absolutely return your item. \n\nAccording to our policy, returns are free as long as they are initiated within 30 days of delivery. Since you received your item 15 days ago, you are well within this window. \n\nPlease make sure the item is unused and in its original packaging. To start your return, you can easily print a pre-paid return shipping label through our online customer portal. \n\nIf you need help with anything else, please let me know!",
+                    "thought": null,
+                    "thought_signature": null,
+                    "video_metadata": null,
+                    "tool_call": null,
+                    "tool_response": null,
+                    "part_metadata": null
+                  }
+                ],
+                "role": "model"
+              }
+            }
+          ],
+          "reference": null,
+          "system_instruction": null,
+          "conversation_history": null,
+          "rubric_groups": null,
+          "eval_case_id": "returns_query",
+          "intermediate_events": null,
+          "agent_info": null,
+          "agent_data": {
+            "agents": {
+              "customer_support_workflow": {
+                "agent_id": "customer_support_workflow",
+                "agent_type": "Workflow",
+                "description": "",
+                "instruction": null,
+                "tools": [],
+                "sub_agents": []
+              }
+            },
+            "turns": [
+              {
+                "turn_index": 0,
+                "turn_id": "turn_0",
+                "events": [
+                  {
+                    "author": "shipping_faq",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": null,
+                          "function_response": null,
+                          "inline_data": null,
+                          "text": "Hello! Yes, you can absolutely return your item. \n\nAccording to our policy, returns are free as long as they are initiated within 30 days of delivery. Since you received your item 15 days ago, you are well within this window. \n\nPlease make sure the item is unused and in its original packaging. To start your return, you can easily print a pre-paid return shipping label through our online customer portal. \n\nIf you need help with anything else, please let me know!",
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "event_time": null,
+                    "state_delta": null,
+                    "active_tools": null
+                  }
+                ]
+              }
+            ]
+          },
+          "user_scenario": null
+        },
+        {
+          "prompt": {
+            "parts": [
+              {
+                "media_resolution": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "file_data": null,
+                "function_call": null,
+                "function_response": null,
+                "inline_data": null,
+                "text": "What is the weather like in New York?",
+                "thought": null,
+                "thought_signature": null,
+                "video_metadata": null,
+                "tool_call": null,
+                "tool_response": null,
+                "part_metadata": null
+              }
+            ],
+            "role": "user"
+          },
+          "responses": [
+            {
+              "response": {
+                "parts": [
+                  {
+                    "media_resolution": null,
+                    "code_execution_result": null,
+                    "executable_code": null,
+                    "file_data": null,
+                    "function_call": null,
+                    "function_response": null,
+                    "inline_data": null,
+                    "text": "I'm sorry, but I can only assist with shipping-related inquiries (such as shipping rates, package tracking, delivery status, and returns). How can I help you with your shipping needs today?",
+                    "thought": null,
+                    "thought_signature": null,
+                    "video_metadata": null,
+                    "tool_call": null,
+                    "tool_response": null,
+                    "part_metadata": null
+                  }
+                ],
+                "role": "model"
+              }
+            }
+          ],
+          "reference": null,
+          "system_instruction": null,
+          "conversation_history": null,
+          "rubric_groups": null,
+          "eval_case_id": "unrelated_weather",
+          "intermediate_events": null,
+          "agent_info": null,
+          "agent_data": {
+            "agents": {
+              "customer_support_workflow": {
+                "agent_id": "customer_support_workflow",
+                "agent_type": "Workflow",
+                "description": "",
+                "instruction": null,
+                "tools": [],
+                "sub_agents": []
+              }
+            },
+            "turns": [
+              {
+                "turn_index": 0,
+                "turn_id": "turn_0",
+                "events": [
+                  {
+                    "author": "customer_support_workflow",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": null,
+                          "function_response": null,
+                          "inline_data": null,
+                          "text": "I'm sorry, but I can only assist with shipping-related inquiries (such as shipping rates, package tracking, delivery status, and returns). How can I help you with your shipping needs today?",
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "event_time": null,
+                    "state_delta": null,
+                    "active_tools": null
+                  }
+                ]
+              }
+            ]
+          },
+          "user_scenario": null
+        },
+        {
+          "prompt": {
+            "parts": [
+              {
+                "media_resolution": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "file_data": null,
+                "function_call": null,
+                "function_response": null,
+                "inline_data": null,
+                "text": "Tell me a joke.",
+                "thought": null,
+                "thought_signature": null,
+                "video_metadata": null,
+                "tool_call": null,
+                "tool_response": null,
+                "part_metadata": null
+              }
+            ],
+            "role": "user"
+          },
+          "responses": [
+            {
+              "response": {
+                "parts": [
+                  {
+                    "media_resolution": null,
+                    "code_execution_result": null,
+                    "executable_code": null,
+                    "file_data": null,
+                    "function_call": null,
+                    "function_response": null,
+                    "inline_data": null,
+                    "text": "I'm sorry, but I can only assist with shipping-related inquiries (such as shipping rates, package tracking, delivery status, and returns). How can I help you with your shipping needs today?",
+                    "thought": null,
+                    "thought_signature": null,
+                    "video_metadata": null,
+                    "tool_call": null,
+                    "tool_response": null,
+                    "part_metadata": null
+                  }
+                ],
+                "role": "model"
+              }
+            }
+          ],
+          "reference": null,
+          "system_instruction": null,
+          "conversation_history": null,
+          "rubric_groups": null,
+          "eval_case_id": "unrelated_general",
+          "intermediate_events": null,
+          "agent_info": null,
+          "agent_data": {
+            "agents": {
+              "customer_support_workflow": {
+                "agent_id": "customer_support_workflow",
+                "agent_type": "Workflow",
+                "description": "",
+                "instruction": null,
+                "tools": [],
+                "sub_agents": []
+              }
+            },
+            "turns": [
+              {
+                "turn_index": 0,
+                "turn_id": "turn_0",
+                "events": [
+                  {
+                    "author": "customer_support_workflow",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": null,
+                          "function_response": null,
+                          "inline_data": null,
+                          "text": "I'm sorry, but I can only assist with shipping-related inquiries (such as shipping rates, package tracking, delivery status, and returns). How can I help you with your shipping needs today?",
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "event_time": null,
+                    "state_delta": null,
+                    "active_tools": null
+                  }
+                ]
+              }
+            ]
+          },
+          "user_scenario": null
+        }
+      ],
+      "eval_dataset_df": null,
+      "candidate_name": null
+    }
+  ],
+  "metadata": {
+    "candidate_names": [
+      "candidate_1"
+    ],
+    "dataset_name": null,
+    "dataset_id": null,
+    "creation_timestamp": "2026-06-23T14:24:38.643452Z",
+    "dataset": [
+      {
+        "prompt_display_text": "How much does overnight shipping cost?",
+        "prompt_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"How much does overnight shipping cost?\"\n    }\n  ],\n  \"role\": \"user\"\n}",
+        "reference": "",
+        "reference_raw_json": "",
+        "response_display_text": "Hello! \n\nOvernight shipping costs $29.99 and takes next business day to arrive. \n\nPlease let me know if you have any other questions or if there is anything else I can assist you with!",
+        "response_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"Hello! \\n\\nOvernight shipping costs $29.99 and takes next business day to arrive. \\n\\nPlease let me know if you have any other questions or if there is anything else I can assist you with!\"\n    }\n  ],\n  \"role\": \"model\"\n}",
+        "intermediate_events": null,
+        "agent_data": "{\"agents\": {\"customer_support_workflow\": {\"agent_id\": \"customer_support_workflow\", \"agent_type\": \"Workflow\", \"description\": \"\", \"tools\": [], \"sub_agents\": []}}, \"turns\": [{\"turn_index\": 0, \"turn_id\": \"turn_0\", \"events\": [{\"author\": \"shipping_faq\", \"content\": {\"parts\": [{\"text\": \"Hello! \\n\\nOvernight shipping costs $29.99 and takes next business day to arrive. \\n\\nPlease let me know if you have any other questions or if there is anything else I can assist you with!\"}], \"role\": \"model\"}}]}]}"
+      },
+      {
+        "prompt_display_text": "Where is my package? The tracking number is 1234567890.",
+        "prompt_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"Where is my package? The tracking number is 1234567890.\"\n    }\n  ],\n  \"role\": \"user\"\n}",
+        "reference": "",
+        "reference_raw_json": "",
+        "response_display_text": "Hello! Thank you for reaching out to us.\n\nYou can easily track the status of your package on our website using your 10-digit tracking number (1234567890). \n\nIf the tracking status shows as \"delivered\" but you cannot locate your package, please verify with your neighbors to see if it was accepted on your behalf, or contact us directly at tracking@shippingco.com for further assistance. \n\nPlease let me know if there is anything else I can help you with!",
+        "response_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"Hello! Thank you for reaching out to us.\\n\\nYou can easily track the status of your package on our website using your 10-digit tracking number (1234567890). \\n\\nIf the tracking status shows as \\\"delivered\\\" but you cannot locate your package, please verify with your neighbors to see if it was accepted on your behalf, or contact us directly at tracking@shippingco.com for further assistance. \\n\\nPlease let me know if there is anything else I can help you with!\"\n    }\n  ],\n  \"role\": \"model\"\n}",
+        "intermediate_events": null,
+        "agent_data": "{\"agents\": {\"customer_support_workflow\": {\"agent_id\": \"customer_support_workflow\", \"agent_type\": \"Workflow\", \"description\": \"\", \"tools\": [], \"sub_agents\": []}}, \"turns\": [{\"turn_index\": 0, \"turn_id\": \"turn_0\", \"events\": [{\"author\": \"shipping_faq\", \"content\": {\"parts\": [{\"text\": \"Hello! Thank you for reaching out to us.\\n\\nYou can easily track the status of your package on our website using your 10-digit tracking number (1234567890). \\n\\nIf the tracking status shows as \\\"delivered\\\" but you cannot locate your package, please verify with your neighbors to see if it was accepted on your behalf, or contact us directly at tracking@shippingco.com for further assistance. \\n\\nPlease let me know if there is anything else I can help you with!\"}], \"role\": \"model\"}}]}]}"
+      },
+      {
+        "prompt_display_text": "Can I return an item I received 15 days ago?",
+        "prompt_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"Can I return an item I received 15 days ago?\"\n    }\n  ],\n  \"role\": \"user\"\n}",
+        "reference": "",
+        "reference_raw_json": "",
+        "response_display_text": "Hello! Yes, you can absolutely return your item. \n\nAccording to our policy, returns are free as long as they are initiated within 30 days of delivery. Since you received your item 15 days ago, you are well within this window. \n\nPlease make sure the item is unused and in its original packaging. To start your return, you can easily print a pre-paid return shipping label through our online customer portal. \n\nIf you need help with anything else, please let me know!",
+        "response_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"Hello! Yes, you can absolutely return your item. \\n\\nAccording to our policy, returns are free as long as they are initiated within 30 days of delivery. Since you received your item 15 days ago, you are well within this window. \\n\\nPlease make sure the item is unused and in its original packaging. To start your return, you can easily print a pre-paid return shipping label through our online customer portal. \\n\\nIf you need help with anything else, please let me know!\"\n    }\n  ],\n  \"role\": \"model\"\n}",
+        "intermediate_events": null,
+        "agent_data": "{\"agents\": {\"customer_support_workflow\": {\"agent_id\": \"customer_support_workflow\", \"agent_type\": \"Workflow\", \"description\": \"\", \"tools\": [], \"sub_agents\": []}}, \"turns\": [{\"turn_index\": 0, \"turn_id\": \"turn_0\", \"events\": [{\"author\": \"shipping_faq\", \"content\": {\"parts\": [{\"text\": \"Hello! Yes, you can absolutely return your item. \\n\\nAccording to our policy, returns are free as long as they are initiated within 30 days of delivery. Since you received your item 15 days ago, you are well within this window. \\n\\nPlease make sure the item is unused and in its original packaging. To start your return, you can easily print a pre-paid return shipping label through our online customer portal. \\n\\nIf you need help with anything else, please let me know!\"}], \"role\": \"model\"}}]}]}"
+      },
+      {
+        "prompt_display_text": "What is the weather like in New York?",
+        "prompt_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"What is the weather like in New York?\"\n    }\n  ],\n  \"role\": \"user\"\n}",
+        "reference": "",
+        "reference_raw_json": "",
+        "response_display_text": "I'm sorry, but I can only assist with shipping-related inquiries (such as shipping rates, package tracking, delivery status, and returns). How can I help you with your shipping needs today?",
+        "response_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"I'm sorry, but I can only assist with shipping-related inquiries (such as shipping rates, package tracking, delivery status, and returns). How can I help you with your shipping needs today?\"\n    }\n  ],\n  \"role\": \"model\"\n}",
+        "intermediate_events": null,
+        "agent_data": "{\"agents\": {\"customer_support_workflow\": {\"agent_id\": \"customer_support_workflow\", \"agent_type\": \"Workflow\", \"description\": \"\", \"tools\": [], \"sub_agents\": []}}, \"turns\": [{\"turn_index\": 0, \"turn_id\": \"turn_0\", \"events\": [{\"author\": \"customer_support_workflow\", \"content\": {\"parts\": [{\"text\": \"I'm sorry, but I can only assist with shipping-related inquiries (such as shipping rates, package tracking, delivery status, and returns). How can I help you with your shipping needs today?\"}], \"role\": \"model\"}}]}]}"
+      },
+      {
+        "prompt_display_text": "Tell me a joke.",
+        "prompt_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"Tell me a joke.\"\n    }\n  ],\n  \"role\": \"user\"\n}",
+        "reference": "",
+        "reference_raw_json": "",
+        "response_display_text": "I'm sorry, but I can only assist with shipping-related inquiries (such as shipping rates, package tracking, delivery status, and returns). How can I help you with your shipping needs today?",
+        "response_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"I'm sorry, but I can only assist with shipping-related inquiries (such as shipping rates, package tracking, delivery status, and returns). How can I help you with your shipping needs today?\"\n    }\n  ],\n  \"role\": \"model\"\n}",
+        "intermediate_events": null,
+        "agent_data": "{\"agents\": {\"customer_support_workflow\": {\"agent_id\": \"customer_support_workflow\", \"agent_type\": \"Workflow\", \"description\": \"\", \"tools\": [], \"sub_agents\": []}}, \"turns\": [{\"turn_index\": 0, \"turn_id\": \"turn_0\", \"events\": [{\"author\": \"customer_support_workflow\", \"content\": {\"parts\": [{\"text\": \"I'm sorry, but I can only assist with shipping-related inquiries (such as shipping rates, package tracking, delivery status, and returns). How can I help you with your shipping needs today?\"}], \"role\": \"model\"}}]}]}"
+      }
+    ]
+  },
+  "agent_info": null
+}

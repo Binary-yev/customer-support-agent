@@ -1,0 +1,269 @@
+{
+  "eval_cases": [
+    {
+      "prompt": {
+        "parts": [
+          {
+            "text": "How much does overnight shipping cost?"
+          }
+        ],
+        "role": "user"
+      },
+      "responses": [
+        {
+          "response": {
+            "parts": [
+              {
+                "text": "Hello there! I would be absolutely thrilled to help you with our shipping rates today! 🚚💨\n\nIf you need your package in a super-duper hurry, our lightning-fast **Overnight Shipping** is just **$29.99** to get it to your door the very next business day! 🚀🌟\n\nBut wait, there is even more excitement! 🎉✨ If you are doing some shopping, please remember that we offer **FREE STANDARD SHIPPING** on all orders over **$50**! 🛒🎁 It is the ultimate way to save some extra pennies! (Otherwise, Standard Shipping is just $5.99 and takes 3-5 business days, or you can grab Express Shipping for $14.99 which takes 1-2 business days! ⚡)\n\nLet me know if you need help with anything else. Have an absolutely wonderful day! 🌈✨"
+              }
+            ],
+            "role": "model"
+          }
+        }
+      ],
+      "eval_case_id": "shipping_rate_query",
+      "agent_data": {
+        "agents": {
+          "customer_support_workflow": {
+            "agent_id": "customer_support_workflow",
+            "agent_type": "Workflow",
+            "description": "",
+            "tools": [],
+            "sub_agents": []
+          }
+        },
+        "turns": [
+          {
+            "turn_index": 0,
+            "turn_id": "turn_0",
+            "events": [
+              {
+                "author": "shipping_faq",
+                "content": {
+                  "parts": [
+                    {
+                      "text": "Hello there! I would be absolutely thrilled to help you with our shipping rates today! 🚚💨\n\nIf you need your package in a super-duper hurry, our lightning-fast **Overnight Shipping** is just **$29.99** to get it to your door the very next business day! 🚀🌟\n\nBut wait, there is even more excitement! 🎉✨ If you are doing some shopping, please remember that we offer **FREE STANDARD SHIPPING** on all orders over **$50**! 🛒🎁 It is the ultimate way to save some extra pennies! (Otherwise, Standard Shipping is just $5.99 and takes 3-5 business days, or you can grab Express Shipping for $14.99 which takes 1-2 business days! ⚡)\n\nLet me know if you need help with anything else. Have an absolutely wonderful day! 🌈✨"
+                    }
+                  ],
+                  "role": "model"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "prompt": {
+        "parts": [
+          {
+            "text": "Where is my package? The tracking number is 1234567890."
+          }
+        ],
+        "role": "user"
+      },
+      "responses": [
+        {
+          "response": {
+            "parts": [
+              {
+                "text": "Hello! Thank you for reaching out to us today. I would be happy to help you locate your package! \n\nYou can track your package directly on our website using your unique 10-digit tracking number: **1234567890**. \n\nAs a quick reminder, our standard delivery hours are Monday through Saturday, from 8:00 AM to 8:00 PM. If your tracking status ever shows \"delivered\" but you cannot find your package, please be sure to verify with your neighbors or reach out to our tracking team at tracking@shippingco.com for further assistance.\n\nWhile your package is on its way, we also wanted to share some super exciting news for your future orders! 🎉✨ Did you know about our absolutely amazing shipping rates?! 🌟 \n\n* **Standard Shipping** (3-5 business days) is just $5.99, but guess what? It is completely **FREE for all orders over $50!** 🛒🎁 Talk about an incredible deal!\n* Need it faster? We have **Express Shipping** (1-2 business days) for just $14.99! 🚀\n* Need it in a flash? We offer **Overnight Shipping** (next business day) for $29.99! ⚡ *(Just a heads up, a physical signature is required for all Overnight and high-value shipments!)*\n\nPlease let me know if there is anything else I can do to help you today! Have a wonderful day! 😊"
+              }
+            ],
+            "role": "model"
+          }
+        }
+      ],
+      "eval_case_id": "tracking_query",
+      "agent_data": {
+        "agents": {
+          "customer_support_workflow": {
+            "agent_id": "customer_support_workflow",
+            "agent_type": "Workflow",
+            "description": "",
+            "tools": [],
+            "sub_agents": []
+          }
+        },
+        "turns": [
+          {
+            "turn_index": 0,
+            "turn_id": "turn_0",
+            "events": [
+              {
+                "author": "shipping_faq",
+                "content": {
+                  "parts": [
+                    {
+                      "text": "Hello! Thank you for reaching out to us today. I would be happy to help you locate your package! \n\nYou can track your package directly on our website using your unique 10-digit tracking number: **1234567890**. \n\nAs a quick reminder, our standard delivery hours are Monday through Saturday, from 8:00 AM to 8:00 PM. If your tracking status ever shows \"delivered\" but you cannot find your package, please be sure to verify with your neighbors or reach out to our tracking team at tracking@shippingco.com for further assistance.\n\nWhile your package is on its way, we also wanted to share some super exciting news for your future orders! 🎉✨ Did you know about our absolutely amazing shipping rates?! 🌟 \n\n* **Standard Shipping** (3-5 business days) is just $5.99, but guess what? It is completely **FREE for all orders over $50!** 🛒🎁 Talk about an incredible deal!\n* Need it faster? We have **Express Shipping** (1-2 business days) for just $14.99! 🚀\n* Need it in a flash? We offer **Overnight Shipping** (next business day) for $29.99! ⚡ *(Just a heads up, a physical signature is required for all Overnight and high-value shipments!)*\n\nPlease let me know if there is anything else I can do to help you today! Have a wonderful day! 😊"
+                    }
+                  ],
+                  "role": "model"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "prompt": {
+        "parts": [
+          {
+            "text": "Can I return an item I received 15 days ago?"
+          }
+        ],
+        "role": "user"
+      },
+      "responses": [
+        {
+          "response": {
+            "parts": [
+              {
+                "text": "Hello! Thank you for reaching out to us today. \n\nYes, you can absolutely return your item! Our policy allows for free returns as long as they are initiated within 30 days of delivery. Since you received your item 15 days ago, you are well within the return window. \n\nTo complete your return, please make sure the item is unused and in its original packaging. You can easily print your pre-paid return shipping label through our online customer portal. \n\nOnce your return is processed and you are ready to do some more shopping, keep our wonderful shipping options in mind! we have some super exciting rates for you:\n* **Standard Shipping** is just $5.99 (3-5 business days), but guess what? It is completely **FREE** for any order over $50! 🛒🎁🎉✨\n* **Express Shipping** is $14.99 (1-2 business days) ⚡\n* **Overnight Shipping** is $29.99 (next business day) 🚀\n\nPlease let us know if you have any other questions. Have a wonderful day! 😊"
+              }
+            ],
+            "role": "model"
+          }
+        }
+      ],
+      "eval_case_id": "returns_query",
+      "agent_data": {
+        "agents": {
+          "customer_support_workflow": {
+            "agent_id": "customer_support_workflow",
+            "agent_type": "Workflow",
+            "description": "",
+            "tools": [],
+            "sub_agents": []
+          }
+        },
+        "turns": [
+          {
+            "turn_index": 0,
+            "turn_id": "turn_0",
+            "events": [
+              {
+                "author": "shipping_faq",
+                "content": {
+                  "parts": [
+                    {
+                      "text": "Hello! Thank you for reaching out to us today. \n\nYes, you can absolutely return your item! Our policy allows for free returns as long as they are initiated within 30 days of delivery. Since you received your item 15 days ago, you are well within the return window. \n\nTo complete your return, please make sure the item is unused and in its original packaging. You can easily print your pre-paid return shipping label through our online customer portal. \n\nOnce your return is processed and you are ready to do some more shopping, keep our wonderful shipping options in mind! we have some super exciting rates for you:\n* **Standard Shipping** is just $5.99 (3-5 business days), but guess what? It is completely **FREE** for any order over $50! 🛒🎁🎉✨\n* **Express Shipping** is $14.99 (1-2 business days) ⚡\n* **Overnight Shipping** is $29.99 (next business day) 🚀\n\nPlease let us know if you have any other questions. Have a wonderful day! 😊"
+                    }
+                  ],
+                  "role": "model"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "prompt": {
+        "parts": [
+          {
+            "text": "What is the weather like in New York?"
+          }
+        ],
+        "role": "user"
+      },
+      "responses": [
+        {
+          "response": {
+            "parts": [
+              {
+                "text": "I'm sorry, but I can only assist with shipping-related inquiries (such as shipping rates, package tracking, delivery status, and returns). How can I help you with your shipping needs today?"
+              }
+            ],
+            "role": "model"
+          }
+        }
+      ],
+      "eval_case_id": "unrelated_weather",
+      "agent_data": {
+        "agents": {
+          "customer_support_workflow": {
+            "agent_id": "customer_support_workflow",
+            "agent_type": "Workflow",
+            "description": "",
+            "tools": [],
+            "sub_agents": []
+          }
+        },
+        "turns": [
+          {
+            "turn_index": 0,
+            "turn_id": "turn_0",
+            "events": [
+              {
+                "author": "customer_support_workflow",
+                "content": {
+                  "parts": [
+                    {
+                      "text": "I'm sorry, but I can only assist with shipping-related inquiries (such as shipping rates, package tracking, delivery status, and returns). How can I help you with your shipping needs today?"
+                    }
+                  ],
+                  "role": "model"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "prompt": {
+        "parts": [
+          {
+            "text": "Tell me a joke."
+          }
+        ],
+        "role": "user"
+      },
+      "responses": [
+        {
+          "response": {
+            "parts": [
+              {
+                "text": "I'm sorry, but I can only assist with shipping-related inquiries (such as shipping rates, package tracking, delivery status, and returns). How can I help you with your shipping needs today?"
+              }
+            ],
+            "role": "model"
+          }
+        }
+      ],
+      "eval_case_id": "unrelated_general",
+      "agent_data": {
+        "agents": {
+          "customer_support_workflow": {
+            "agent_id": "customer_support_workflow",
+            "agent_type": "Workflow",
+            "description": "",
+            "tools": [],
+            "sub_agents": []
+          }
+        },
+        "turns": [
+          {
+            "turn_index": 0,
+            "turn_id": "turn_0",
+            "events": [
+              {
+                "author": "customer_support_workflow",
+                "content": {
+                  "parts": [
+                    {
+                      "text": "I'm sorry, but I can only assist with shipping-related inquiries (such as shipping rates, package tracking, delivery status, and returns). How can I help you with your shipping needs today?"
+                    }
+                  ],
+                  "role": "model"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
