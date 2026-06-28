@@ -1,86 +1,75 @@
-# customer-support-agent
+# AI Customer Support Agent
 
-Simple ReAct agent
-Agent generated with `agents-cli` version `0.5.1`
+An intelligent customer support routing agent built with the Google Agent Development Kit (ADK 2.0) and Python. It utilizes an event-driven graph workflow to classify incoming queries, route shipping-related questions to a specialized LLM FAQ agent, and decline unrelated queries directly in Python to save LLM tokens.
 
 ## Project Structure
 
 ```
 customer-support-agent/
-├── app/         # Core agent code
-│   ├── agent.py               # Main agent logic
-│   └── app_utils/             # App utilities and helpers
-├── tests/                     # Unit, integration, and load tests
-├── GEMINI.md                  # AI-assisted development guide
-└── pyproject.toml             # Project dependencies
+├── app/                  # Core agent code
+│   ├── agent.py          # Main agent and graph workflow definition
+│   └── app_utils/        # App utilities and helpers
+├── tests/                # Unit, integration, and load tests
+│   ├── eval/             # LLM-as-judge quality evaluations
+│   ├── integration/      # Integration test suite
+│   └── unit/             # Unit test suite
+├── pyproject.toml        # Project dependencies (FastAPI, ADK, etc.)
+└── Dockerfile            # Container deployment configuration
 ```
-
-> 💡 **Tip:** Use [Gemini CLI](https://github.com/google-gemini/gemini-cli) for AI-assisted development - project context is pre-configured in `GEMINI.md`.
-
-## Requirements
-
-Before you begin, ensure you have:
-- **uv**: Python package manager (used for all dependency management in this project) - [Install](https://docs.astral.sh/uv/getting-started/installation/) ([add packages](https://docs.astral.sh/uv/concepts/dependencies/) with `uv add <package>`)
-- **agents-cli**: Agents CLI - Install with `uv tool install google-agents-cli`
-- **Google Cloud SDK**: For GCP services - [Install](https://cloud.google.com/sdk/docs/install)
-
-
-## Quick Start
-
-Install `agents-cli` and its skills if not already installed:
-
-```bash
-uvx google-agents-cli setup
-```
-
-Install required packages:
-
-```bash
-agents-cli install
-```
-
-Test the agent with a local web server:
-
-```bash
-agents-cli playground
-```
-
-You can also use features from the [ADK](https://adk.dev/) CLI with `uv run adk`.
-
-## Commands
-
-| Command              | Description                                                                                 |
-| -------------------- | ------------------------------------------------------------------------------------------- |
-| `agents-cli install` | Install dependencies using uv                                                         |
-| `agents-cli playground` | Launch local development environment                                                  |
-| `agents-cli lint`    | Run code quality checks                                                               |
-| `agents-cli eval`    | Evaluate agent behavior (generate, grade, analyze, and more — see `agents-cli eval --help`) |
-| `uv run pytest tests/unit tests/integration` | Run unit and integration tests                                                        |
-
-## 🛠️ Project Management
-
-| Command | What It Does |
-|---------|--------------|
-| `agents-cli scaffold enhance` | Add CI/CD pipelines and Terraform infrastructure |
-| `agents-cli infra cicd` | One-command setup of entire CI/CD pipeline + infrastructure |
-| `agents-cli scaffold upgrade` | Auto-upgrade to latest version while preserving customizations |
 
 ---
 
-## Development
+## Architecture & Flow
 
-Edit your agent logic in `app/agent.py` and test with `agents-cli playground` - it auto-reloads on save.
+The agent utilizes a directed graph workflow to coordinate query classification and response generation. Unrelated queries bypass LLM processing entirely, conserving token usage.
 
-## Deployment
-
-```bash
-gcloud config set project <your-project-id>
-agents-cli deploy
+```mermaid
+graph TD
+    A[Start: User Input Query] --> B[classify_query Node]
+    B --> C[Gemini 3.5 Flash Classifier]
+    C --> D{Is Shipping Related?}
+    D -- Yes --> E[Route: shipping]
+    D -- No --> F[Route: unrelated]
+    E --> G[LlmAgent: shipping_faq]
+    G --> H[Generate policy-compliant response]
+    F --> I[Python Node: decline_to_answer]
+    I --> J[Return static polite refusal response without LLM]
+    H --> K[End: Return Response]
+    J --> K
 ```
 
-To add CI/CD and Terraform, run `agents-cli scaffold enhance`.
-To set up your production infrastructure, run `agents-cli infra cicd`.
+---
 
-## Observability
+## Setup & Running
 
-Built-in telemetry exports to Cloud Trace, BigQuery, and Cloud Logging.
+### Requirements
+
+Before you begin, ensure you have:
+- **uv**: Python package manager
+- **agents-cli**: Google Agents CLI
+- **Google Cloud SDK**: For GCP authentication
+
+### Installation
+
+1. Install `agents-cli` and dependencies:
+   ```bash
+   uvx google-agents-cli setup
+   agents-cli install
+   ```
+
+2. Run the agent locally:
+   ```bash
+   agents-cli playground
+   ```
+
+## Running Tests & Evals
+
+- Run unit and integration tests:
+  ```bash
+  uv run pytest tests/unit tests/integration
+  ```
+- Run quality evaluations:
+  ```bash
+  agents-cli eval generate
+  agents-cli eval grade
+  ```
